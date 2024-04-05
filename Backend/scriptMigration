@@ -1,0 +1,5 @@
+migrate create -ext sql -dir database/migrations/ -seq add_user_table
+
+migrate -path database/migrations/ -database "postgresql://postgres:P@ssw0rd@localhost:5433/loreal?sslmode=disable" -verbose up
+
+migrate -path database/migrations/ -database "postgresql://postgres:P@ssw0rd@localhost:5433/loreal?sslmode=disable" -verbose down
